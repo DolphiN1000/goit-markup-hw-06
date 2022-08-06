@@ -469,8 +469,72 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <form>
-          <h2>Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="modal-form">
+          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+          <label class="modal-form-field">
+            <span class="modal-form-input-description">Ім'я</span>
+            <span class="modal-form-input-wrapper">
+              <input
+                type="text"
+                name="user_name"
+                class="modal-form-input"
+                required
+                pattern="[a-zA-Zа-яА-Я]+"
+                minlength="2"
+              />
+              <span class="modal-form-input-icon"><svg width="12" height="12">
+                <use href="./images/icons.svg#person"></use>
+              </svg></span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-description">Телефон</span>
+            <span class="modal-form-input-wrapper">
+              <input
+                type="tel"
+                name="user_phone"
+                class="modal-form-input"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              />
+              <span class="modal-form-input-icon"></span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-description">Пошта</span>
+            <span class="modal-form-input-wrapper">
+              <input
+                type="email"
+                name="user_email"
+                class="modal-form-input"
+                required
+              
+              />
+              <span class="modal-form-input-icon"></span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-description"> Коментар</span>
+            <textarea
+              name="user_message"
+              class="modal-form-message"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <input
+            id="user-policy"
+            type="checkbox"
+            name="user_policy"
+            class="modal-form-check visually-hidden"
+          />
+          <label for="user-policy" class="modal-form-check-descriprion">
+            Погоджуюся з розсилкою та приймаю&nbsp;<a 
+            class="modal-form-check-link link"
+            href="">Умови договору</a>
+          </label>
+          <button type="submit" class="modal-form-submit">отправить</button>
+        </form>
         </form>
       </div>
     </div>
